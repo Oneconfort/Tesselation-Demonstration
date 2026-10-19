@@ -1,0 +1,42 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+#pragma kernel FillWhite
+#pragma kernel DrawnSpot
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> image;
+float colorValue;
+float resolution;
+float posX;
+float posY;
+float spotSize;
+float scale;
+float smoothness;
+
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    image[id.xy] -= float4(colorValue, colorValue, colorValue, colorValue);
+}
+
+[numthreads(8,8,1)]
+void FillWhite (uint3 id : SV_DispatchThreadID)
+{
+    image[id.xy] = float4(0, 0, 0, 0);
+}
+
+[numthreads(8,8,1)]
+void DrawnSpot (uint3 id : SV_DispatchThreadID)
+{
+    float size = spotSize / resolution;
+    size = size / scale;
+    float rough = smoothness / resolution;
+    rough = rough / scale;
+
+    float2 uv = float2 ((float)id.x/resolution, (float)id.y/resolution);
+	float value = distance(uv, float2(posX / resolution ,posY / resolution));   
+    value = smoothstep(value, value + rough, size);
+
+    image[id.xy] += float4(value, value, value, value);
+}

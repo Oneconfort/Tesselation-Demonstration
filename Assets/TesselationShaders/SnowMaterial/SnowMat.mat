@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SnowMat
+  m_Shader: {fileID: 4800000, guid: 646ba7b05143cc94a898a531c7b99b2d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _DYNAMIC_HEIGHT
+  - _GENERATE_NORMALS_HEIGHT
+  - _PARTITIONING_INTEGER
+  - _TESSELLATION_FACTOR_CONSTANT
+  m_InvalidKeywords:
+  - _TESSELLATION_SMOOTHING_FLAT
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - MainTexture:
+        m_Texture: {fileID: 2800000, guid: 23950d93295a34e479b69a49daf79ade, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DeformationMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightMap:
+        m_Texture: {fileID: 8600000, guid: 0afb89cb0a36e9543a0c196a8ea2968d, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BackFaceCullTolerance: 0.05
+    - _DYNAMICHEIGHT: 1
+    - _DynamicHeight: 1
+    - _FactorEdge2: 2.3
+    - _FactorEdge3: 2.83
+    - _FactorInside: 1
+    - _FrustumCullTolerance: 0.05
+    - _GENERATE_NORMALS: 1
+    - _HeightMapAltitude: 1.39
+    - _NormalStrength: 1
+    - _PARTITIONING: 0
+    - _TESSELLATION_FACTOR: 0
+    - _TESSELLATION_SMOOTHING: 0
+    - _TessellationBias: 1
+    - _TessellationFactor: 5
+    - _TessellationFactorVColors: 0
+    - _TessellationSmoothing: 1
+    m_Colors:
+    - _BaseColor: {r: 0.8306337, g: 0.954294, b: 0.9622642, a: 1}
+    - _DeepColor: {r: 0.25591847, g: 0.50556815, b: 0.6698113, a: 1}
+    - _FactorEdge1: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
